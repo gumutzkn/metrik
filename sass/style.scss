@@ -133,9 +133,9 @@ span {
     color: #fff;
     text-transform: uppercase;
     cursor: pointer;
-    transition: all 0.5s ease-out;
     position: relative;
     overflow: hidden;
+    transition: all 0.5s ease-in;
 
     &:hover {
       color: black;
@@ -156,7 +156,7 @@ span {
     height: 100%;
     background: #fff;
     z-index: -1;
-    transition: 0.9s;
+    transition: all 0.5s ease-in;
   }
 }
 
@@ -210,15 +210,30 @@ span {
   }
 }
 
-.bölüm-2 {
-  background-color: red;
+.bölüm-1 {
   display: flex;
-  position: absolute;
-  top: 112px;
-  transform: translateX(-100%);
-  transition: all 0.9s ease-in;
 }
 
-.içeriye {
-  transform: translateX(0);
+.bölüm-2 {
+  display: flex;
+}
+.bölüm-3 {
+  display: flex;
+}
+
+.move {
+  animation-name: moveIn;
+  animation-duration: 1.3s;
+}
+
+@keyframes moveIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

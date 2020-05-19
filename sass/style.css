@@ -166,10 +166,10 @@ span {
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
   position: relative;
   overflow: hidden;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .heading__button:hover {
@@ -189,8 +189,8 @@ span {
   height: 100%;
   background: #fff;
   z-index: -1;
-  -webkit-transition: 0.9s;
-  transition: 0.9s;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .circle__1 {
@@ -245,21 +245,54 @@ span {
   color: white;
 }
 
-.bölüm-2 {
-  background-color: red;
+.bölüm-1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  top: 112px;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition: all 0.9s ease-in;
-  transition: all 0.9s ease-in;
 }
 
-.içeriye {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+.bölüm-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bölüm-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.move {
+  -webkit-animation-name: moveIn;
+          animation-name: moveIn;
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+}
+
+@-webkit-keyframes moveIn {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveIn {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
